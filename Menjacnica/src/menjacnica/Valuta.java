@@ -14,36 +14,57 @@ public class Valuta {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if(skraceniNaziv==null || skraceniNaziv.isEmpty()){
+			throw new RuntimeException("Naziv ne sme biti null ili prazan string");
+		}
 		this.naziv = naziv;
 	}
 	public String getSkraceniNaziv() {
 		return skraceniNaziv;
 	}
 	public void setSkraceniNaziv(String skraceniNaziv) {
+		if(skraceniNaziv==null || skraceniNaziv.isEmpty()){
+			throw new RuntimeException("Naziv ne sme biti null ili prazan string");
+		}
 		this.skraceniNaziv = skraceniNaziv;
 	}
 	public GregorianCalendar getDatum() {
 		return datum;
 	}
 	public void setDatum(GregorianCalendar datum) {
+		if( datum==null){
+			throw new RuntimeException("datum ne sme biti null");
+		}
 		this.datum = datum;
 	}
 	public double getProdajniKurs() {
 		return prodajniKurs;
 	}
 	public void setProdajniKurs(double prodajniKurs) {
+		if(prodajniKurs<=0){
+			throw new RuntimeException("Prodajni kurs ne sme biti manji ili jednak 0");
+		}
+		
 		this.prodajniKurs = prodajniKurs;
 	}
 	public double getSrednjiKurs() {
 		return srednjiKurs;
 	}
 	public void setSrednjiKurs(double srednjiKurs) {
+		if(srednjiKurs<=0){
+			throw new RuntimeException("Srednji kurs ne sme biti manji ili jednak 0");
+		}
+		
 		this.srednjiKurs = srednjiKurs;
 	}
 	public double getKupovniKurs() {
 		return kupovniKurs;
 	}
 	public void setKupovniKurs(double kupovniKurs) {
+		if(kupovniKurs<=0){
+			throw new RuntimeException("Kupovni kurs ne sme biti manji ili jednak 0");
+		}
+		
 		this.kupovniKurs = kupovniKurs;
 	}
 	@Override
