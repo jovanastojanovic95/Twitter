@@ -7,6 +7,7 @@ import menjacnica.interfejs.MenjacnicaInterfejs;
 
 public class Menjacnica implements MenjacnicaInterfejs {
 	
+
 	LinkedList<Valuta> valuta=new LinkedList<Valuta>();
 
 	@Override
@@ -38,9 +39,9 @@ public class Menjacnica implements MenjacnicaInterfejs {
 		for(int i=0;i<valuta.size();i++){
 			
 			if(valuta.get(i).equals(v)){
-				valuta.get(i).setProdajniKurs(0);
-				valuta.get(i).setKupovniKurs(0);
-				valuta.get(i).setSrednjiKurs(0);
+
+				valuta.remove(i);
+
 				
 				break;
 			}
@@ -65,8 +66,9 @@ public class Menjacnica implements MenjacnicaInterfejs {
 			kursevi[0]=valuta.get(i).getProdajniKurs();
 			kursevi[1]=valuta.get(i).getSrednjiKurs();
 			kursevi[2]=valuta.get(i).getKupovniKurs();
-			
-			
+
+			break;
+
 			}
 		}
 		
