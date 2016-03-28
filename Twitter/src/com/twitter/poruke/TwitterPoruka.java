@@ -39,6 +39,7 @@ public class TwitterPoruka {
 /**
  * Ova metoda postavlja vrednost atributa poruka na unetu poruku.
  * @param poruka odgovarajuca poruka
+ * @throws java.lang.RuntimeException kada korisnik unese pogresne vrednosti
  */
 	public void setPoruka(String poruka) {
 		if (poruka == null || poruka.length() > 140)
